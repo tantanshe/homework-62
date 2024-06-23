@@ -2,5 +2,22 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
+  color: #006767;
+}
+
+.img {
+  border-radius: 10px;
+  max-width: 500px;
+  height: auto;
+}
+
+.main-title {
   text-align: center;
+  margin-top: 30px;
+}
+
+.carousel-img {
+  object-fit: cover;
+  height: 700px;
+  width: 100%;
 }

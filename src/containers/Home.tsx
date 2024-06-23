@@ -1,9 +1,18 @@
 import React from 'react';
+import {Form, Button} from 'react-bootstrap';
 
 const Home: React.FC = () => {
   return (
     <div className="container mt-4">
-      <h1>My website</h1>
+      <div className="d-flex">
+        <img className="img" src="https://seoulbeats.com/wp-content/uploads/2015/05/20150520_seoulbeats_shinee3.jpg"
+             alt="Main pic 1"/>
+      </div>
+      <div className="d-flex justify-content-end">
+        <img className="img" src="https://mylittlediamonds.com.br/wp-content/uploads/2015/11/bg08.jpg"
+             alt="Main pic 2"/>
+      </div>
+      <h1 className="main-title">My website</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sollicitudin, ipsum at mollis tincidunt, leo
         massa blandit augue, blandit rutrum urna erat eget lorem. Vestibulum ullamcorper hendrerit facilisis. Praesent
         dignissim justo venenatis lorem lacinia, sed dignissim elit tempor. Donec facilisis ultrices libero, sit amet
@@ -20,6 +29,30 @@ const Home: React.FC = () => {
         libero in velit. Suspendisse eu dolor a lorem tempor sodales ut sed neque. Nunc vel tincidunt lectus, sed
         sagittis dui.
       </p>
+
+      <hr />
+      <h2>Contact me</h2>
+
+      <Form>
+        <Form.Group controlId="formName" className="mb-3">
+          <Form.Label>Name</Form.Label>
+          <Form.Control type="text" placeholder="Enter your name"/>
+        </Form.Group>
+
+        <Form.Group controlId="formEmail" className="mb-3">
+          <Form.Label>Email address</Form.Label>
+          <Form.Control type="email" placeholder="Enter your email"/>
+        </Form.Group>
+
+        <Form.Group controlId="formMessage" className="mb-3">
+          <Form.Label>Message</Form.Label>
+          <Form.Control as="textarea" rows={3}/>
+        </Form.Group>
+
+        <Button variant="dark" type="submit">
+          Submit
+        </Button>
+      </Form>
     </div>
   );
 };
